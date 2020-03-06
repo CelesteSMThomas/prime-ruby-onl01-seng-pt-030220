@@ -16,21 +16,21 @@ def number(array)
     next unless p
 
     # Break if we are past the square root of the max value 
-    break if p*p > max
+    break if p*p > array
     counter += 1
     # Start at the square of the current number, and step through.
     # Go up to the max value, by multiples of the current number, and replace
     # that value with nil in the primes array
-    (p*p).step(number,p) { |m| primes[m] = nil }
+    (p*p).step(array,p) { |m| primes[m] = nil }
   end
 
   # Finally, return the compacted array.
-  puts "Solved for #{number} in #{counter} steps."
+  puts "Solved for #{array} in #{counter} steps."
   primes.compact
 end
 
 def prime?(num)
-  number(num).include?(num)
+  array(num).include?(num)
 end
 
 puts prime?(105557)
