@@ -1,10 +1,7 @@
 require 'benchmark'
-require 'bigdecimal/math'
 
-# calculate pi to 10k digits
-#puts Benchmark.measure { BigMath.PI(10_000) }
 
-def sieve(max)
+def number(array)
   # Set up an array with all the numbers from 0 to the max
   primes = (0..max).to_a
 
