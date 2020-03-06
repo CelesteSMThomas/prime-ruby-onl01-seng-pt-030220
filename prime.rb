@@ -3,7 +3,7 @@ require 'benchmark'
 
 def number(array)
   # Set up an array with all the numbers from 0 to the max
-  primes = (0..max).to_a
+  primes = (0..array).to_a
 
   # Set both the first and second positions (i.e., 0 and 1) to nil, as they
   # aren't prime.
@@ -30,7 +30,7 @@ def number(array)
 end
 
 def prime?(num)
-  sieve(num).include?(num)
+  number(num).include?(num)
 end
 
 puts prime?(105557)
