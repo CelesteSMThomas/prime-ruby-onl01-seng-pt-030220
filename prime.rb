@@ -21,11 +21,11 @@ def number(array)
     # Start at the square of the current number, and step through.
     # Go up to the max value, by multiples of the current number, and replace
     # that value with nil in the primes array
-    (p*p).step(max,p) { |m| primes[m] = nil }
+    (p*p).step(number,p) { |m| primes[m] = nil }
   end
 
   # Finally, return the compacted array.
-  puts "Solved for #{max} in #{counter} steps."
+  puts "Solved for #{number} in #{counter} steps."
   primes.compact
 end
 
