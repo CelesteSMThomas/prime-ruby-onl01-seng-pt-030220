@@ -30,7 +30,7 @@ def number(array)
 end
 
 def prime?(num)
-  array(num).include?(num)
+  number(num).include?(num)
 end
 
 puts prime?(105557)
